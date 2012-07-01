@@ -8,7 +8,11 @@ function setupTooltip() {
   $("a[rel='tooltip']").tooltip();
 }
 
-jQuery(function($) {
+function postProcesses() {
   setupFakeLink();
   setupTooltip();
+}
+
+jQuery(function($) {
+  postProcesses();
 });
