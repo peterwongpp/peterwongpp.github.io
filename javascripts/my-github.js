@@ -19,7 +19,7 @@ function formatRepo(repo) {
   result += "<article id='" + repo["id"] + "' class='repo'>";
   result += "<header><h1>";
   result += "<img src='" + repo["owner"]["avatar_url"] + "'>";
-  result += "<a href='" + repo["html_url"] + "'>" + repo["full_name"] + "</a>";
+  result += " <a href='" + repo["html_url"] + "'>" + repo["full_name"] + "</a>";
   result += "<small> - " + repo["language"] + "</small>";
   // handle forks from
   result += "</h1></header>";
