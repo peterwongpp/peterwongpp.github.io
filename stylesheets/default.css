@@ -1,0 +1,32 @@
+body {
+  padding-top: 60px;
+}
+
+.fake-link {
+  cursor: default;
+}
+
+article.repo header {
+  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 19px;
+  padding-bottom: 19px;
+}
+article.repo header h1 {
+  font-size: 1.8em;
+}
+article.repo header img {
+  vertical-align: bottom;
+}
+
+
+article.repo footer {
+  border-top: 1px solid #eee;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  margin-top: 19px;
+  padding-top: 19px;
+}
+article.repo footer span {
+  margin-right: 1em;
+  font-size: 1.2em;
+}
