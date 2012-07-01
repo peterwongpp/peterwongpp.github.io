@@ -45,7 +45,7 @@ function parseForMainContent(repos) {
     result += "</article>";
     result += "</div>";
   }
-  $(mainContent).html(result);
+  $(mainContent).append(result);
 }
 
 function parseForSidebar(repos) {
@@ -60,5 +60,5 @@ function parseForSidebar(repos) {
   }
   result += "</ul>"
   result += "</aside></div>";
-  $(sidebar).html(result);
+  $(sidebar).append(result);
 }
