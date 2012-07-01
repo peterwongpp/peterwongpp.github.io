@@ -1,17 +1,26 @@
 var mainContent = "#repos";
+var sidebar = "#sidebar";
+
+function getApiLimit(container) {
+  $.getJSON("https://api.github.com/rate_limit?callback=?", function(response) {
+    $(container + " span").html(response["data"]["rate"]["remaining"] + " / " + response["data"]["rate"]["limit"]);
+  });
+}
 
 function getRepos(username) {
   $.getJSON("https://api.github.com/users/" + username + "/repos?sort=updated&callback=?", function(response) {
     parseForMainContent(response["data"]);
+    parseForSidebar(response["data"]);
     postProcesses();
   });
 }
 
 function parseForMainContent(repos) {
   var result = "";
+  var repo;
   var len = repos.length;
-  for (var i=0; i < len; i++) {
-    var repo = repos[i];
+  for (var i=0; i<len; i++) {
+    repo = repos[i];
     result += "<div class='well'>";
     result += "<article id='" + repo["id"] + "' class='repo'>";
     result += "<header><h1>";
@@ -39,8 +48,17 @@ function parseForMainContent(repos) {
   $(mainContent).html(result);
 }
 
-function getApiLimit(container) {
-  $.getJSON("https://api.github.com/rate_limit?callback=?", function(response) {
-    $(container + " span").html(response["data"]["rate"]["remaining"] + " / " + response["data"]["rate"]["limit"]);
-  });
+function parseForSidebar(repos) {
+  var result = "<div class='well'><aside>";
+  result += "<header><h1>Repos</h1></header>";
+  result += "<ul>"
+  var repo;
+  var len = repos.length;
+  for (var i=0; i<len; i++) {
+    repo = repos[i];
+    result += "<li><a href='#" + repo["id"] + "'>" + repo["name"] + "</a></li>";
+  }
+  result += "</ul>"
+  result += "</aside></div>";
+  $(sidebar).html(result);
 }
