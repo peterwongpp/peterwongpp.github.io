@@ -7,6 +7,8 @@ function getRepos(username, container) {
       result += formatRepo(repo);
     }
     $(container).html(result);
+    setupFakeLink();
+    setupTooltip();
   });
 }
 
