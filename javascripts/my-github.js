@@ -30,6 +30,7 @@ function formatRepo(repo) {
   result += "<dd>" + repo["description"] + "</dd>";
   result += "</dl>";
   result += "<footer>";
+  result += "<span class='icon-eye-open'> <a href='#' class='fake-link' rel='tooltip' title='Watching'>" + repo["watchers"] + "</a></span>";
   result += "<span class='icon-paper-clip'> <a href='#' class='fake-link' rel='tooltip' title='Open Issues'>" + repo["open_issues"] + "</a></span>";
   result += "<span class='icon-sitemap'> <a href='#' class='fake-link' rel='tooltip' title='Forks'>" + repo["forks"] + '</a></span>';
   result += "</footer>";
