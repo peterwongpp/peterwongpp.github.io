@@ -1,0 +1,1588 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>結他譜s</title>
+
+    <link rel="stylesheet" href="foundation/foundation-icons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/css/foundation.min.css" integrity="sha256-1mcRjtAxlSjp6XJBgrBeeCORfBp/ppyX4tsvpQVCcpA= sha384-b5S5X654rX3Wo6z5/hnQ4GBmKuIJKMPwrJXn52ypjztlnDK2w9+9hSMBz/asy9Gw sha512-M1VveR2JGzpgWHb0elGqPTltHK3xbvu3Brgjfg4cg5ZNtyyApxw/45yHYsZ/rCVbfoO5MSZxB241wWq642jLtA==" crossorigin="anonymous"/>
+
+    <style type="text/css">
+      #incanvas-menu {
+        background-color: #e3e3e3;
+      }
+
+      #main-menu .button, #main-menu a {
+        padding-top: .4em;
+        padding-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-y medium-grid-frame">
+      <div class="cell medium-auto medium-cell-block-container">
+        <div class="grid-x" style="height: 100%;">
+
+          <div class="grid-y">
+            <div class="cell shrink">
+              <form>
+                <div class="input-group">
+                  <span class="input-group-label">Search</span>
+                  <input id="filter-input" class="input-group-field" type="text" placeholder="Filter..."/>
+                </div>
+              </form>
+            </div>
+            <div class="cell auto cell-block">
+              <ul id="main-menu" class="vertical menu icons icon-left"></ul>
+            </div>
+            <div class="cell medium-4">
+              <div class="responsive-embed">
+                <iframe name="youtube-frame" allowfullscreen frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="cell medium-9 medium-cell-block-y">
+            <iframe name="display" width="100%" height="100%" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/js/foundation.min.js" integrity="sha256-WUKHnLrIrx8dew//IpSEmPN/NT3DGAEmIePQYIEJLLs= sha384-53StQWuVbn6figscdDC3xV00aYCPEz3srBdV/QGSXw3f19og3Tq2wTRe0vJqRTEO sha512-X9O+2f1ty1rzBJOC8AXBnuNUdyJg0m8xMKmbt9I3Vu/UOWmSg5zG+dtnje4wAZrKtkopz/PEDClHZ1LXx5IeOw==" crossorigin="anonymous"></script>
+    <script>
+      var data = {
+        "AKB48": {
+          "365日の紙飛行機": {
+            "path": "365日の紙飛行機-AKB48-Capo0-KeyG.pdf",
+            "youtube": "UO6FY4kJ4Y4",
+          },
+        },
+        "By2": {
+          "不哭了": {
+              "path": "不哭了-By2-Capo5-KeyC.pdf",
+              "youtube": "V_nC4IGAkH8",
+            },
+        },
+        "Dear Jane": {
+          "不許你注定一人": {
+              "path": "不許你注定一人-Dear Jane-Capo1-KeyG.pdf",
+              "youtube": "UppBiK8xpeg",
+            },
+          "到此為止": {
+              "path": "http://polygonguitar.blogspot.com/2013/01/dear-jane-chord.html",
+              "youtube": "rqLc6-AzrPU",
+            },
+        },
+        "許志安": {
+          "假如讓我說下去": {
+              "path": "http://polygonguitar.blogspot.com/2012/04/chord_5698.html",
+              "youtube": "SeO68mn_OCY",
+            },
+          "唯獨你是不可取替": {
+              "path": "http://polygonguitar.blogspot.com/2012/05/chord_9518.html",
+              "youtube": "QYm_uehCcrU",
+            },
+          "Remember Me": {
+              "path": "https://www.polygon.guitars/score/4017/Remember%20Me",
+              "youtube": "aNfiI9pcv2U",
+            },
+        },
+        "張智霖": {
+          "歲月如歌": {
+              "path": "http://polygonguitar.blogspot.com/2013/09/chord_3824.html",
+              "youtube": "rhb63DpYeX4",
+            },
+        },
+        "方力申 鄧麗欣": {
+          "好好戀愛": {
+              "path": "http://polygonguitar.blogspot.com/2012/10/chord_24.html",
+              "youtube": "IQ6zaA1T2Ck",
+            },
+        },
+        "鄧麗欣": {
+          "他不准我哭": {
+              "path": "http://polygonguitar.blogspot.com/2012/10/chord_3481.html",
+              "youtube": "uJgpqeWAunY",
+            },
+        },
+        "王菲": {
+          "容易受傷的女人": {
+              "path": "http://polygonguitar.blogspot.com/2012/10/chord_5575.html",
+              "youtube": "16vc92H1EgA",
+          },
+          "約定": {
+            "path": "約定-王菲-Capo4-KeyC.pdf",
+            "youtube": "wns3XAGpjqQ",
+          },
+        },
+        "鄭中基": {
+          "無賴": {
+              "path": "http://polygonguitar.blogspot.com/2012/12/chord_7669.html",
+              "youtube": "migZH5LJ-D0",
+            },
+        },
+        "王光良": {
+          "童話": {
+              "path": "http://polygonguitar.blogspot.com/2012/11/chord_8743.html",
+              "youtube": "GsWudXPjYlQ",
+            },
+        },
+        "Le Couple": {
+          "ひだまりの詩": {
+              "path": "https://ja.chordwiki.org/wiki/ひだまりの詩",
+              "youtube": "kdEb-16-nyo",
+            },
+        },
+        "Kiroro": {
+          "忘れないで": {
+            "path": "https://music.j-total.net/data/007ki/006_kiroro/013.html",
+            "youtube": "wIkhFuOlokU",
+          },
+          "未来へ": {
+            "path": "https://gakufu.gakki.me/m/?p=DT13049&k=m5",
+            "youtube": "f6Eyu2V4iDs",
+          }
+        },
+        "Iñigo Pascual": {
+          "Remember Me": {
+              "path": "Remember Me-Iñigo Pascual-Capo0-KeyG.pdf",
+              "youtube": "2kx8AxkUHFI",
+            },
+        },
+        "John Denver": {
+          "Perhaps Love": {
+              "path": "Perhaps Love-John Denver-Capo0-KeyA.pdf",
+              "youtube": "toYfeN0ACDw",
+            },
+        },
+        "いきものがかり": {
+          "SAKURA": {
+              "path": "http://gakufu.gakki.me/m/?p=DT2138&k=m1",
+              "youtube": "7_UW6acbdyU",
+            },
+          "帰りたくなったよ": {
+              "path": "http://gakufu.gakki.me/m/?p=DT2424&k=m3",
+              "youtube": "GUkNiWPuK1o",
+            },
+          "笑顔": {
+            "path": "https://gakufu.gakki.me/m/index.php?p=N02178&k=m2#rp",
+          },
+          "ラストシーン": {
+            "path": "https://gakufu.gakki.me/m/index2.php?p=N06711&k=m2#rp",
+          },
+          "ありがとう": {
+            "path": "https://gakufu.gakki.me/m/data/N00293.html",
+          },
+        },
+        "張棟樑": {
+          "當你孤單你會想起誰": {
+              "path": "http://chords-haven.blogspot.com/2007/01/blog-post_3829.html?m=1",
+              "youtube": "5LhKG8ucAF8",
+            },
+        },
+        "林夏薇": {
+          "很想討厭你": {
+              "path": "http://polygonguitar.blogspot.com/2014/02/intro-chord.html",
+              "youtube": "mnLSctPwmxo",
+            },
+        },
+        "許廷鏗": {
+          "記住忘記我": {
+            "path": "http://daydayguitar.blogspot.com/2015/12/9VI8pbRHHM4.html",
+            "youtube": "ashFOK0A3Wo",
+          },
+          "青春頌": {
+            "path": "青春頌-許廷鏗-Capo5-KeyG.pdf",
+          },
+          "我們與愛的距離": {"path": "我們與愛的距離-許廷鏗-Capo4-KeyG.pdf"},
+        },
+        "Supper Moment": {
+          "最後晚餐": {
+              "path": "最後晚餐-Supper Moment-Capo1-KeyG.pdf",
+              "youtube": "mIxp4R_ysCc",
+            },
+          "幸福之歌": {
+              "path": "幸福之歌-Supper Moment-Capo0-KeyCToCS.pdf",
+              "youtube": "7TefwmjpAqo",
+            },
+          "小伙子": {
+              "path": "http://polygonguitar.blogspot.com/2012/04/supper-moment-chord_14.html",
+              "youtube": "BxsW2sBw3pM",
+            },
+        },
+        "Mr.": {
+          "森林": {
+              "path": "http://polygonguitar.blogspot.com/2012/04/mr-chord.html",
+              "youtube": "cXhMmKFpFeQ",
+            },
+        },
+        "Kolor": {
+          "候鳥": {
+              "path": "http://polygonguitar.blogspot.com/2013/05/kolor-chord.html",
+              "youtube": "okfLPZot6tc",
+            },
+          "圍城": {
+              "path": "http://polygonguitar.blogspot.com/2012/04/kolor-chord_09.html",
+              "youtube": "-JA20hJl4Bc",
+            },
+        },
+        "The Platters": {
+          "Only You": {
+              "path": "Only You-The Platters-Capo3-KeyC.pdf",
+              "youtube": "3FygIKsnkCw",
+            },
+        },
+        "廖碧兒": {
+          "夢": {
+              "path": "http://polygonguitar.blogspot.com/2013/03/tvb-achord.html",
+              "youtube": "dAx4e1UxoiY",
+            },
+        },
+        "Whiteberry": {
+          "夏祭り": {
+              "path": "http://gakufu.gakki.me/m/?p=DT08547&k=m1",
+              "youtube": "pYk8Tk_qr40",
+            },
+        },
+        "松本梨香": {
+          "めざせポケモンマスター": {
+              "path": "http://gakufu.gakki.me/m/data/RQ03857.html",
+              "youtube": "54Ra3mURKgs",
+            },
+        },
+        "蘇打綠": {
+          "小情歌": {
+              "path": "小情歌-蘇打綠-Capo2-KeyC.pdf",
+              "youtube": "in8NNzwFa-s",
+            },
+        },
+        "植村花菜": {
+          "世界一ごはん": {
+              "path": "http://gakufu.gakki.me/m/?p=N00516&k=m3",
+              "youtube": "BMiQ8tk-OyY",
+            },
+        },
+        "秦基博": {
+          "ひまわりの約束": {
+              "path": "http://gakufu.gakki.me/m/?p=N03251&k=m1",
+              "youtube": "eXTo49Qo-9E",
+            },
+        },
+        "鍾嘉欣": {
+          "一人晚餐": {
+              "path": "https://zh-hk.guitarians.com/chord/1785/鍾嘉欣-一人晚餐",
+              "youtube": "1evm3VvfVx4",
+            },
+        },
+        "奥井亜紀": {
+          "勇気の鐘～晴れてハレルヤⅡ～": {
+              "path": "https://ja.chordwiki.org/wiki.cgi?c=view&t=勇気の鐘&key=-5&symbol=",
+              "youtube": "escqDJdTj1U",
+            },
+        },
+        "Vanessa Williams": {
+          "Colors of the Wind": {
+              "path": "Colors of the Wind-Vanessa Williams-Capo1-KeyC.pdf",
+              "youtube": "O9MvdMqKvpU",
+            },
+        },
+        "ZONE": {
+          "secret base〜君がくれたもの〜": {
+              "path": "secret base〜君がくれたもの〜-ZONE-Capo1-KeyC.pdf",
+              "youtube": "p2bx9n-ybrU",
+            },
+        },
+        "五月天": {
+          "T1213121": {
+            "path": "T1213121-五月天-Capo0-KeyC.pdf",
+            "youtube": "Oactz6LFiZI",
+          },
+          "終於結束的起點": {
+            "path": "終於結束的起點-五月天-Capo0-KeyC.pdf",
+            "youtube": "Jv3zvWZlXkk",
+          },
+          "突然好想你": {
+            "path": "http://polygonguitar.blogspot.com/2012/01/chord-mv.html",
+            "youtube": "GtDRcXtDg-4",
+          },
+          "傷心的人別聽慢歌": {
+            "path": "傷心的人別聽慢歌-五月天-Capo0-KeyAm.pdf",
+            "youtube": "",
+          },
+          "有些事現在不做一輩子都不會做了": {
+            "path": "有些事現在不做一輩子都不會做了-五月天-Capo2-KeyC.pdf",
+            "youtube": "",
+          },
+          "我不願讓你一個人": {
+            "path": "https://www.91pu.com.tw/song/2016/0705/3952.html",
+          },
+          "星空": {"path": "星空-五月天-Capo5-KeyC.pdf"},
+        },
+        "MAHO堂": {
+          "おジャ魔女カーニバル!!": {
+              "path": "https://ja.chordwiki.org/wiki/おジャ魔女カーニバル!!+おジャ魔女どれみ",
+              "youtube": "agX0qoks-qI",
+            },
+        },
+        "ZARD": {
+          "心を開いて": {
+              "path": "http://gakufu.gakki.me/m/data/DT10777.html",
+              "youtube": "t8i659swO3A",
+            },
+        },
+        "梅艷芳": {
+          "夕陽之歌": {
+              "path": "http://polygonguitar.blogspot.com/2015/04/chord_84.html",
+              "youtube": "dw6PcYALt7A",
+            },
+          "似水流年": {
+              "path": "https://www.polygon.guitars/score/1028/似水流年",
+              "youtube": "-b4ndR0SW6Y",
+            },
+        },
+        "梁靜茹": {
+          "暖暖": {
+              "path": "http://polygonguitar.blogspot.com/2012/12/chord_3767.html",
+              "youtube": "gE6uuacCjhA",
+            },
+        },
+        "米津玄師": {
+          "Lemon": {
+            "path": "https://gakufu.gakki.me/m/?p=OCD2258&k=m4",
+            "youtube": "SX_ViT4Ra7k",
+          },
+          "馬と鹿": {
+            "path": "https://gakufu.gakki.me/m/data/SP19627.html",
+          },
+        },
+        "テレサ・テン": {
+          "時の流れに身をまかせ": {
+              "path": "https://gakufu.gakki.me/m/?p=DT2475&k=m5",
+              "youtube": "orwRnoi01AM",
+            },
+        },
+        "近藤真彦": {
+          "夕焼けの歌": {
+              "path": "http://gakufu.gakki.me/m/?p=DT13485&k=m2",
+              "youtube": "cy_DP_9qr-4",
+            },
+        },
+        "任劍輝 白雪仙": {
+          "帝女花之香夭": {
+              "path": "帝女花之香夭-任劍輝+白雪仙-Capo1-KeyEm.pdf",
+              "youtube": "Gdz9FuUPyPk",
+            },
+        },
+        "宇多田ヒカル": {
+          "First Love": {
+              "path": "First Love-宇多田ヒカル-Capo0.pdf",
+              "youtube": "o1sUaVJUeB0",
+            },
+        },
+        "岡崎律子": {
+          "いつでも微笑みを (Capo 0)": {
+              "path": "いつでも微笑みを-岡崎律子-Capo0-KeyD.pdf",
+              "youtube": "VxsnhLum3ng",
+            },
+          "いつでも微笑みを (Capo 2)": {
+              "path": "いつでも微笑みを-岡崎律子-Capo2-KeyC.pdf",
+              "youtube": "VxsnhLum3ng",
+            },
+          "I'm always close to you": {"path": "I'm always close to you-岡崎律子-Capo0-KeyD.pdf"}
+        },
+        "方皓玟": {
+          "分手總約在雨天": {
+              "path": "分手總約在雨天-方皓玟-Capo2-KeyC.pdf",
+              "youtube": "fj2AXuGctXI",
+            },
+        },
+        "李聖傑 林隆璇": {
+          "你那麼愛她": {
+              "path": "你那麼愛她-李聖傑+林隆璇-Capo3-KeyG.pdf",
+              "youtube": "i4LVsOt000g",
+            },
+        },
+        "淺葉 花音 雪霏嵐嵐": {
+          "你贈給我的回憶": {
+              "path": "你贈給我的回憶-淺葉+花音+雪霏嵐嵐-Capo-1-KeyC.pdf",
+              "youtube": "uvXB5gaxRIc",
+            },
+        },
+        "葉文輝": {
+          "I Believe": {
+              "path": "I Believe-葉文輝-Capo0-KeyG.pdf",
+              "youtube": "xKweryAzr1g",
+            },
+        },
+        "Raidas": {
+          "傾心": {
+            "path": "http://polygonguitar.blogspot.com/2012/12/raidas-chord.html",
+            "youtube": "ICunhbbXU1A",
+          },
+          "傾心 (Capo 2)": {
+            "path": "傾心-Raidas-Capo2-KeyC.pdf",
+            "youtube": "ICunhbbXU1A",
+          },
+        },
+        "葉蘊儀": {
+          "哪兒": {
+            "path": "哪兒-葉蘊儀-Capo1-KeyC.pdf",
+            "youtube": "7xByyw-m6BQ",
+          },
+        },
+        "葉蘊儀 專家Dickson": {
+          "中女羅生門 (Capo 0)": {
+            "path": "中女羅生門-葉蘊儀+專家Dickson-Capo0-KeyF.pdf",
+            "youtube": "opxAC1HXtdg",
+          },
+          "中女羅生門 (Capo 5)": {
+            "path": "中女羅生門-葉蘊儀+專家Dickson-Capo5-KeyC.pdf",
+            "youtube": "opxAC1HXtdg",
+          },
+        },
+        "蔣嘉瑩": {
+          "假如真的再有約會": {
+            "path": "假如真的再有約會-蔣嘉瑩-Capo0-KeyG.pdf",
+            "youtube": "jik6kfmtm_I",
+          },
+        },
+        "譚嘉儀": {
+          "印記": {
+            "path": "印記-譚嘉儀-Capo2-KeyC.pdf",
+            "youtube": "FyWptcEXLJg",
+          },
+        },
+        "鍾嘉欣": {
+          "最幸福的事": {
+            "path": "最幸福的事-鍾嘉欣-Capo1-KeyD.pdf",
+            "youtube": "1KZ28EMNjIQ",
+          },
+        },
+        "黃淑蔓 英仁合唱團": {
+          "差一點我們會飛": {
+            "path": "差一點我們會飛-黃淑蔓&英仁合唱團-Capo3-KeyG.pdf",
+            "youtube": "Vsr5gpmmvhs",
+          },
+        },
+        "やなぎなぎ": {
+          "恋文": {
+            "path": "恋文-やなぎなぎ-Capo1-KeyC.pdf",
+            "youtube": "oeR9MCn_AG8",
+          },
+        },
+        "許思行": {
+          "月亮下禱告": {
+            "path": "月亮下禱告-許思行-Capo0-KeyC.pdf",
+            "youtube": "8fOW4gPSLXY",
+          },
+        },
+        "黃菀之": {
+          "月亮說": {
+            "path": "月亮說-黃菀之-Capo0-KeyC.pdf",
+            "youtube": "Pb8PyFxwmsA",
+          },
+        },
+        "Andrew Lloyd Webber": {
+          "All I Ask Of You": {
+            "path": "https://tabs.ultimate-guitar.com/tab/misc-soundtrack/the-phantom-of-the-opera-all-i-ask-of-you-chords-118116",
+          },
+        },
+        "赤い鳥": {
+          "翼をください": {
+            "path": "https://ja.chordwiki.org/wiki/翼をください",
+            "youtube": "la35ph4gpuA"
+          }
+        },
+        "放課後ティータイム": {
+          "Don't say \"lazy\"": {
+            "path": "https://ja.chordwiki.org/wiki/Dont+Say+lazy",
+            "youtube": "Wz-pNcgYo0c",
+          },
+          "U&I": {
+            "path": "https://ja.chordwiki.org/wiki/U＆I",
+            "youtube": "AhfZEDa7zMo",
+          },
+          "翼をください": {
+            "path": "https://ja.chordwiki.org/wiki/翼をください+(桜高軽音部)",
+            "youtube": "DA9UnKFxm9U",
+          },
+        },
+        "林明日香": {
+          "小さきもの": {
+            "path": "https://ja.chordwiki.org/wiki.cgi?c=view&t=小さきもの&key=-1&symbol=",
+            "youtube": "B3IYHmbiZyw",
+          },
+        },
+        "本名陽子": {
+          "カントリーロード": {
+            "path": "https://ja.chordwiki.org/wiki/カントリーロード(簡易アレンジver)",
+            "youtube": "Wxn1Hk0TQ3I",
+          },
+        },
+        "吳雨霏": {
+          "二十世紀少年": {
+            "path": "http://polygonguitar.blogspot.com/2012/04/chord_4784.html",
+            "youtube": "AxP-r3qmm_8",
+          },
+        },
+        "陳奕迅": {
+          "月球上的人 (Simplified)": {
+            "path": "月球上的人-陳奕迅-Capo0-KeyE-simplified.pdf",
+            "youtube": "9K1sB4rrdWo",
+          },
+          "月球上的人": {
+            "path": "月球上的人-陳奕迅-Capo0-KeyE.pdf",
+            "youtube": "9K1sB4rrdWo",
+          },
+          "陀飛輪": {
+            "path": "陀飛輪-陳奕迅-Capo0-KeyC.pdf",
+            "youtube": "URUIcYDq3_I",
+          },
+          "傾城": {
+            "path": "http://polygonguitar.blogspot.com/2012/11/chord_1.html",
+            "youtube": "OGrbnZitJDI",
+          },
+          "今天等我來": {
+            "path": "http://polygonguitar.blogspot.com/2013/01/chord_1150.html",
+            "youtube": "TjRceR22Nbg",
+          },
+          "孤兒仔": {
+            "path": "http://polygonguitar.blogspot.com/2013/02/chord_11.html",
+            "youtube": "1G2Dt_NXfIw",
+          },
+          "一絲不掛": {
+            "path": "http://polygonguitar.blogspot.com/2012/12/chord_11.html",
+            "youtube": "t0EG6pSwcBk",
+          },
+          "想聽": {
+            "path": "https://blog.xuite.net/anthelion/blog/464216023-陳奕迅+-《想聽》Chord譜+和弦譜",
+            "youtube": "sSg4oi2A4dY",
+          },
+        },
+        "平井堅": {
+          "Gaining Through Losing": {
+            "path": "http://gakufu.gakki.me/m/?p=DT01179&k=m4",
+            "youtube": "Q5lkaGxc_JM",
+          },
+          "#302": {"path": "https://gakufu.gakki.me/m/data/OCD3284.html"},
+          "僕は君を恋をする": {"path": "https://gakufu.gakki.me/m/index.php?p=DT12943&k=#rp"},
+        },
+        "二階堂和美": {
+          "いのちの記憶": {
+            "path": "http://gakufu.gakki.me/m/?p=OCD0930&k=m3",
+            "youtube": "dYTyQiX6S8U",
+          },
+        },
+        "王力宏": {
+          "Kiss goodbye": {
+            "path": "http://chords-haven.blogspot.com/2006/07/kiss-goodbye.html",
+            "youtube": "BUFqjRsOA2c",
+          },
+        },
+        "夏川りみ": {
+          "愛よ愛よ": {
+            "path": "http://gakufu.gakki.me/m/data/TM1634.html",
+            "youtube": "Vpx1zPsnl1w",
+          },
+          "木蘭の涙": {
+            "path": "https://gakufu.gakki.me/m/data/DT13313.html",
+            "youtube": "3WQ-_mdihUc",
+          },
+          "島唄": {
+            "path": "https://gakufu.gakki.me/m/index2.php?p=DT12043&k=m1#rp",
+          },
+        },
+        "鄭伊健": {
+          "友情歲月": {
+            "path": "http://polygonguitar.blogspot.com/2013/11/chord_4004.html",
+            "youtube": "4X32WZ7EuO8",
+          },
+        },
+        "陳綺貞": {
+          "旅行的意義": {
+            "path": "https://www.91pu.com.tw/song/2015/1115/1563.html",
+            "youtube": "tv95k0zqnaA",
+          },
+          "魚": {
+            "path": "https://www.91pu.com.tw/song/2015/0717/239.html",
+          },
+        },
+        "Westlife": {
+          "My Love": {
+            "path": "https://tabs.ultimate-guitar.com/tab/westlife/my_love_chords_466",
+            "youtube": "ulOb9gIGGd0",
+          },
+        },
+        "李幸倪": {
+          "月球下的人": {
+            "path": "月球下的人-李幸倪-Capo0-KeyC.pdf",
+            "youtube": "W73UOP-SVfo",
+          },
+        },
+        "林奕匡": {
+          "有人共嗚 (Capo 0)": {
+            "path": "有人共嗚-林奕匡-Capo0-KeyD.pdf",
+            "youtube": "RRgGcZdJgyE",
+          },
+          "有人共嗚 (Capo 2)": {
+            "path": "有人共嗚-林奕匡-Capo2-KeyC.pdf",
+            "youtube": "RRgGcZdJgyE",
+          },
+          "高山低谷": {
+            "path": "高山低谷-林奕匡-Capo0-KeyC.pdf",
+            "youtube": "R2BUiErBRnY",
+          },
+          "一雙手": {
+            "path": "http://polygonguitar.blogspot.com/2016/03/phil-lam-chord.html",
+            "youtube": "pR6C3yTiSbQ",
+          },
+        },
+        "張韻涵": {
+          "隱形的翅膀": {
+            "path": "http://polygonguitar.blogspot.com/2016/03/chord_22.html",
+            "youtube": "be2wvNFTLMc",
+          },
+        },
+        "コブクロ": {
+          "未来": {
+            "path": "未来-コブクロ-Capo3-KeyC.pdf",
+            "youtube": "e4rg15tsWHs",
+          },
+          "何故、旅をするのだろう": {
+            "path": "http://gakufu.gakki.me/m/?p=N06299&k=m4",
+            "youtube": "BFI7ZmFZuwc",
+          },
+          "蕾": {
+            "path": "http://gakufu.gakki.me/m/?p=DT14058&k=m2",
+            "youtube": "WPH1BLHKOJE",
+          },
+          "ここにしか咲かない花": {
+            "path": "http://gakufu.gakki.me/m/?p=DT04893&k=m6",
+            "youtube": "aa8iVP-9M5w",
+          },
+          "永遠にともに": {
+            "path": "https://gakufu.gakki.me/m/index.php?p=DT08264&k=m2#rp",
+          },
+        },
+        "奥華子": {
+          "花火 -君に恋した夏の日-": {
+            "path": "http://gakufu.gakki.me/m/data/DT08649.html",
+            "youtube": "yzBs8YnGjPo",
+          },
+        },
+        "吳國敬": {
+          "我説過要你快樂": {
+            "path": "https://zh-hk.guitarians.com/chord/4612/吳國敬-我説過要你快樂?targetCapo=5",
+            "youtube": "AXEVvfe03hU",
+          },
+        },
+        "back number": {
+          "花束": {
+            "path": "http://gakufu.gakki.me/m/?p=RQ00059&k=m2",
+            "youtube": "UwOHnwF-rzE",
+          },
+          "瞬き": {
+            "path": "http://gakufu.gakki.me/m/?p=OCD2043&k=m1",
+            "youtube": "0aTQuSQfSLA",
+          },
+          "僕は君の事が好きだけど君は僕を別に好きじゃないみたい": {
+            "path": "https://gakufu.gakki.me/m/?p=N05361&k=m1",
+            "youtube": "",
+          },
+          "ハッピーエンド ": {
+            "path": "https://gakufu.gakki.me/m/?p=N07132&k=m2",
+            "youtube": "",
+          },
+          "高嶺の花子さん": {
+            "path": "https://gakufu.gakki.me/m/index.php?p=N02110&k=m2#rp",
+          },
+          "思い出せなくなるその日まで": {
+            "path": "https://gakufu.gakki.me/m/index.php?p=N00685&k=#rp",
+          },
+        },
+        "WANDS": {
+          "世界が終るまでは": {
+            "path": "https://gakufu.gakki.me/m/data/DT11010.html",
+            "youtube": "ugD7IVSmrD8",
+          },
+        },
+        "miwa": {
+          "君と100回目の恋": {
+            "path": "君と100回目の恋-miwa-Capo3-KeyG.pdf",
+            "youtube": "Cltc9moMfqg",
+          },
+          "アイオクリ": {
+            "path": "https://www.ufret.jp/song.php?data=36167",
+            "youtube": "iu5KIdBji9I",
+          },
+          "片想い": {
+            "path": "https://gakufu.gakki.me/m/data/N00929.html",
+            "youtube": "qP4MVT-1tEI",
+          },
+          "夜空。feat. ハジ→": {
+            "path": "https://gakufu.gakki.me/m/?p=N04791&k=m3",
+            "youtube": "",
+          },
+        },
+        "X JAPAN": {
+          "Forever Love": {
+            "path": "https://gakufu.gakki.me/m/?p=DT01124&k=m3",
+            "youtube": "5fqnfiwBfIo",
+          },
+        },
+        "犬山イヌコ": {
+          "ニャースのうた": {
+            "path": "https://gakufu.gakki.me/m/?p=TM3019&k=m2",
+            "youtube": "7OoVkH4ork8",
+          },
+        },
+        "半崎美子": {
+          "明日へ向かう人": {
+            "path": "http://gakufu.gakki.me/m/data/RQ06514.html",
+            "youtube": "7UBkNYAPcpk",
+          },
+        },
+        "RAM WIRE": {
+          "僕らの手には何もないけど、": {
+            "path": "http://gakufu.gakki.me/m/?p=N04311&k=m2",
+            "youtube": "TXpGWhdwXuo",
+          },
+        },
+        "葉德嫻": {
+          "千個太陽": {
+            "path": "https://zh-hk.guitarians.com/chord/3504/葉德嫻-千個太陽",
+            "youtube": "Ut6Lg57Nu_w",
+          },
+        },
+        "古巨基": {
+          "歡樂今宵": {
+            "path": "歡樂今宵-古巨基-Capo4-KeyC.pdf",
+            "youtube": "dkj6eEJIz3Q",
+          },
+          "任天堂流淚": {
+            "path": "http://polygonguitar.blogspot.com/2012/02/chord_09.html",
+            "youtube": "2bTFlkf63NI",
+          },
+        },
+        "胡夏": {
+          "那些年": {
+            "path": "http://polygonguitar.blogspot.com/2011/11/chords.html",
+            "youtube": "xWzlwGVQ6_Q",
+          },
+        },
+        "衛蘭": {
+          "心亂如麻": {
+            "path": "http://polygonguitar.blogspot.com/2012/07/chord_2800.html",
+            "youtube": "pwFz1e6q8Uk",
+          },
+        },
+        "劉若英": {
+          "後來": {
+            "path": "http://polygonguitar.blogspot.com/2012/07/blog-post_15.html",
+            "youtube": "t0igPuDjYUE",
+          },
+          "很愛很愛你": {
+            "path": "http://www.91pu.com.tw/song/2017/0529/6826.html",
+            "youtube": "",
+          },
+          "一輩子的孤單": {
+            "path": "http://www.91pu.com.tw/song/2017/0310/6136.html",
+            "youtube": "",
+          },
+        },
+        "吳若希": {
+          "泣血薔薇": {
+            "path": "泣血薔薇-吳若希-Capo4-KeyEm.pdf",
+            "youtube": "mnFI6R4z3Hw",
+          },
+        },
+        "7!!": {
+          "オレンジ": {
+            "path": "http://gakufu.gakki.me/m/data/N03831.html",
+            "youtube": "mOFAKsnQMmE",
+          },
+        },
+        "荒木毬菜": {
+          "流星": {
+            "path": "流星-荒木毬菜-Capo5-KeyC.pdf",
+            "youtube": "Gt7FWGsNZiQ",
+          },
+        },
+        "F4": {
+          "流星雨": {
+            "path": "流星雨-F4-Capo4-KeyC.pdf",
+            "youtube": "ocTdA8NytIc",
+          },
+        },
+        "容祖兒": {
+          "痛愛": {
+            "path": "痛愛-容祖兒-Capo0-KeyG.pdf",
+            "youtube": "qkT4Mxmm92g",
+          },
+        },
+        "藤谷美和子": {
+          "私たちになりたくて": {
+            "path": "私たちになりたくて-藤谷美和子-Capo0-KeyC.pdf",
+            "youtube": "Hp1sASy27o0",
+          },
+        },
+        "麥浚龍 謝安琪": {
+          "羅生門 (Capo 0)": {
+            "path": "羅生門-麥浚龍+謝安琪-Capo0-KeyF.pdf",
+            "youtube": "OfnhDUBWVl4",
+          },
+          "羅生門 (Capo 5)": {
+            "path": "羅生門-麥浚龍+謝安琪-Capo5-KeyC.pdf",
+            "youtube": "OfnhDUBWVl4",
+          },
+        },
+        "張惠妹": {
+          "聽海": {
+            "path": "聽海-張惠妹-Capo0-KeyC.pdf",
+            "youtube": "mLk61pfiHQ0",
+          },
+        },
+        "黃子華": {
+          "藍天": {
+            "path": "http://polygonguitar.blogspot.com/2012/05/chord_31.html",
+            "youtube": "r68h9P9Rj-I",
+          },
+        },
+        "川嶋あい": {
+          "525ページ": {
+            "path": "http://gakufu.gakki.me/m/?p=DT00204&k=m4",
+            "youtube": "HwbUxZoJSLY",
+          },
+          "旅立ちの日に・・・": {
+            "path": "https://gakufu.gakki.me/m/?p=KS0901&k=m2",
+            "youtube": "DlO308doIyU",
+          },
+          "12個の季節～4度目の春～": {
+            "path": "https://gakufu.gakki.me/m/?p=DT00060&k=m2",
+            "youtube": "DXZ1NAoPcf8",
+          },
+          "マーメイド": {
+            "path": "https://gakufu.gakki.me/m/?p=KS0895&k=m2",
+            "youtube": "-uFQ5RZeQOY",
+          },
+          "『さよなら』『ありがとう』～たった一つの場所～": {
+            "path": "https://gakufu.gakki.me/m/?p=DT00020&k=m2",
+            "youtube": "Lm6Fu-JNJo0",
+          },
+          "Compass": {
+            "path": "https://gakufu.gakki.me/m/?p=KS0894&k=m1",
+            "youtube": "",
+          },
+          "大丈夫だよ": {
+            "path": "https://gakufu.gakki.me/m/data/KS0899.html",
+          },
+        },
+        "The Brothers Four": {
+          "Try to Remember": {
+            "path": "http://www.theguitarguy.com/trytorem.htm",
+            "youtube": "QEm67QbgEGY",
+          },
+        },
+        "DAOKO×米津玄師": {
+          "打上花火": {
+            "path": "https://gakufu.gakki.me/m/?p=N08503&k=m4",
+            "youtube": "-tKVN2mAKRI",
+          },
+        },
+        "王馨平": {
+          "別問我是誰": {
+            "path": "http://polygonguitar.blogspot.com/2013/05/chord_3.html",
+            "youtube": "nkkPCC6Pgrs",
+          },
+        },
+        "大塚愛": {
+          "プラネタリウム": {
+            "path": "http://gakufu.gakki.me/m/?p=DT06780&k=m5",
+            "youtube": "UKDIjpszRDo",
+          },
+          "さくらんぼ": {
+            "path": "http://gakufu.gakki.me/m/data/DT05065.html",
+            "youtube": "upODO6OuOOk",
+          },
+          "ポケット": {
+            "path": "http://gakufu.gakki.me/m/data/DT2339.html",
+            "youtube": "xxzUJXvMS2Y",
+          },
+        },
+        "譚詠麟": {
+          "誰可改變": {
+            "path": "誰可改變-譚詠麟-Capo0-KeyF.pdf",
+            "youtube": "qlNvN-9c0CA",
+          },
+          "愛的替身": {
+            "path": "https://zh-hk.guitarians.com/chord/3285/譚詠麟--愛的替身?targetCapo=3",
+            "youtube": "VL6C68JpFhI",
+          },
+        },
+        "葉蒨文": {
+          "傷逝": {
+            "path": "https://blog.xuite.net/anthelion/blog/230173434-葉蒨文+Sally+Yip+-+%3C%3C傷逝%3E%3E+Chord譜+和弦譜",
+            "youtube": "wPOQkRnB1do",
+          },
+        },
+        "SiS 樂印姊妹": {
+          "謝謝你": {
+            "path": "謝謝你-SiS 樂印姊妹-Capo0-KeyC.pdf",
+            "youtube": "n65vIrGUMmA",
+          },
+          "晚安歌": {
+            "path": "https://daydayguitar.blogspot.com/2014/09/ylzbZzejm9I.html",
+          },
+        },
+        "新垣結衣": {
+          "赤い糸": {
+            "path": "赤い糸-新垣結衣-Capo2-KeyC.pdf",
+            "youtube": "3uYXiU63kwI",
+          },
+        },
+        "Twins": {
+          "跅跅步哈姆太郎": {
+            "path": "跅跅步哈姆太郎-Twins-Capo2-KeyC.pdf",
+            "youtube": "Y4BsRpTQAdo",
+          },
+          "下一站天后": {
+            "path": "http://polygonguitar.blogspot.com/2012/11/twins.html",
+            "youtube": "cPKfUWDmNbo",
+          },
+        },
+        "王祖藍": {
+          "跌落凡間的天使 (Capo 0)": {
+            "path": "跌落凡間的天使-王祖藍-Capo0-KeyD.pdf",
+            "youtube": "2Mta2rYxOBE",
+          },
+          "跌落凡間的天使 (Capo 5)": {
+            "path": "跌落凡間的天使-王祖藍-Capo5-KeyA.pdf",
+            "youtube": "2Mta2rYxOBE",
+          },
+        },
+        "張學友": {
+          "遙遠的她": {
+            "path": "遙遠的她-張學友-Capo0-KeyC.pdf",
+            "youtube": "S32rlLHZX-E",
+          },
+        },
+        "張預東": {
+          "十二隻恐龍": {
+            "path": "http://polygonguitar.blogspot.com/2012/10/chord_9.html",
+            "youtube": "pZdrPvJpWeI",
+          },
+        },
+        "陳百強": {
+          "一生何求": {
+            "path": "http://polygonguitar.blogspot.com/2012/10/chord_2430.html",
+            "youtube": "jgECnV15V6M",
+          },
+        },
+        "タイナカサチ": {
+          "愛しい人へ": {
+            "path": "https://gakufu.gakki.me/m/?p=RQ04082&k=m1",
+            "youtube": "p1z1vQp5kIg",
+          },
+        },
+        "桐谷健太": {
+          "海の声": {
+            "path": "https://gakufu.gakki.me/m/?p=N05013&k=m4",
+            "youtube": "-zQWavER7to",
+          },
+        },
+        "doa": {
+          "英雄": {
+            "path": "https://gakufu.gakki.me/m/?p=KS1016&k=m1",
+            "youtube": "cB8YnpNnfP8",
+          },
+        },
+        "かりゆし58": {
+          "希望の唄": {
+            "path": "https://gakufu.gakki.me/m/?p=TM2383",
+            "youtube": "0PD69ZFBaAM",
+          },
+        },
+        "ToNick": {
+          "長相廝守": {
+            "path": "長相廝守-ToNick-Capo0-KeyF.pdf",
+            "youtube": "sENLQMsYpHE",
+          },
+        },
+        "糖兄妹": {
+          "閃著淚光慢慢的決定 (Capo 0)": {
+            "path": "閃著淚光慢慢的決定-糖兄妹-Capo0-KeyFToGToA.pdf",
+            "youtube": "Y_3wP7yvcrE",
+          },
+          "閃著淚光慢慢的決定 (Capo 5)": {
+            "path": "閃著淚光慢慢的決定-糖兄妹-Capo5-KeyCToDToE.pdf",
+            "youtube": "Y_3wP7yvcrE",
+          },
+        },
+        "張敬軒": {
+          "青春常駐": {
+            "path": "青春常駐-張敬軒-Capo6-KeyC.pdf",
+            "youtube": "sFjLsF_oA3E",
+          },
+        },
+        "滕麗明": {
+          "魔法咕嚕咕嚕": {
+            "path": "魔法咕嚕咕嚕-滕麗明-Capo2-KeyC.pdf",
+            "youtube": "q4Iw9RTDDhQ",
+          },
+          "齊來動腦筋 (Capo 0)": {
+            "path": "齊來動腦筋-滕麗名-Capo0-KeyC.pdf",
+            "youtube": "RkfMhVvJExg",
+          },
+          "齊來動腦筋 (Capo 3)": {
+            "path": "齊來動腦筋-滕麗名-Capo3-KeyG.pdf",
+            "youtube": "RkfMhVvJExg",
+          },
+        },
+        "連詩雅": {
+          "到此為止": {
+            "path": "http://polygonguitar.blogspot.com/2012/04/chord_5438.html",
+            "youtube": "TmpFlFN-EOA",
+          },
+          "舊街角": {
+            "path": "舊街角-連詩雅-Capo1-KeyD.pdf",
+          },
+        },
+        "何韻詩": {
+          "木紋": {
+            "path": "http://polygonguitar.blogspot.com/2012/03/chord_8836.html",
+            "youtube": "70TKiLiKYg4",
+          },
+          "化蝶": {
+            "path": "http://polygonguitar.blogspot.com/2013/01/chord_641.html",
+            "youtube": "wgvwvY627ks",
+          },
+        },
+        "田馥甄": {
+          "小幸運": {
+            "path": "http://polygonguitar.blogspot.com/2015/09/chord_41.html",
+            "youtube": "_sQSXwdtxlY",
+          },
+        },
+        "楊千嬅": {
+          "煉金術": {
+            "path": "http://polygonguitar.blogspot.com/2012/10/chord_25.html",
+            "youtube": "qp5WqWzGSRc",
+          },
+          "可惜我是水瓶座": {
+            "path": "http://polygonguitar.blogspot.com/2012/12/chord_6439.html",
+            "youtube": "to9fBWaaHGI",
+          },
+          "野孩子": {
+            "path": "http://polygonguitar.blogspot.com/2012/03/chord_9017.html",
+            "youtube": "o9NNnhkqfnI",
+          },
+        },
+        "鄭秀文": {
+          "不要驚動愛情": { "path": "http://polygonguitar.blogspot.com/2012/09/chord_4.html", "youtube": "-3ovjhj8ZOE" },
+          "我們都是這樣長大的": { "path": "我們都是這樣長大的-鄭秀文-Capo5-KeyC.pdf" },
+        },
+        "陳慧嫻": {
+          "千千闕歌": {
+            "path": "http://polygonguitar.blogspot.com/2012/10/chord_26.html",
+            "youtube": "YvyEPf9WyEc",
+          },
+        },
+        "梁漢文": {
+          "七友": {
+            "path": "http://polygonguitar.blogspot.com/2013/11/chord_24.html",
+            "youtube": "Ei_rxBWzeh4",
+          },
+          "艦隊": {
+            "path": "http://polygonguitar.blogspot.com/2012/12/chord_6380.html",
+            "youtube": "AopXl7BSGgw",
+          },
+        },
+        "任賢齊": {
+          "浪花一朵朵": {
+            "path": "http://polygonguitar.blogspot.com/2012/06/chord_14.html",
+            "youtube": "ovgI5soqICA",
+          },
+        },
+        "張國榮": {
+          "追": {
+            "path": "http://polygonguitar.blogspot.com/2012/06/chord_2668.html",
+            "youtube": "HcSE3cQH-Ic",
+          },
+          "有心人": {
+            "path": "http://polygonguitar.blogspot.com/2012/12/chord_6253.html",
+            "youtube": "zElyLgkJK7c",
+          },
+        },
+        "モンゴル800": {
+          "小さな恋のうた": {
+            "path": "https://ja.chordwiki.org/wiki.cgi?c=view&t=小さな恋の歌&key=-4&symbol=",
+            "youtube": "u8EkSB9zSpE",
+          },
+        },
+        "RADWIMPS": {
+          "なんでもないや": {
+            "path": "http://gakufu.gakki.me/m/?p=KS0058&k=m4",
+            "youtube": "Jh3vrfmYcYs",
+          },
+          "前前前世": {
+            "path": "http://gakufu.gakki.me/m/?p=N06772&k=m2",
+            "youtube": "PDSkFeMVNFs",
+          },
+        },
+        "GReeeeN": {
+          "キセキ": {
+            "path": "https://gakufu.gakki.me/m/?p=M00016",
+            "youtube": "DwTinTO0o9I",
+          },
+          "愛唄": {
+            "path": "http://gakufu.gakki.me/m/?p=M00149&k=m1",
+            "youtube": "EvwRYGlJWfQ",
+          },
+          "始まりの唄": {
+            "path": "https://gakufu.gakki.me/m/index.php?p=N05936&k=m2#rp",
+            "youtube": "e_JS5L86kjw",
+          },
+        },
+        "鄭伊健": {
+          "自動勝利 Let's Fight": {
+            "path": "http://polygonguitar.blogspot.com/2012/06/lets-fight01-chord.html",
+            "youtube": "2zx-wdO0L20",
+          },
+        },
+        "Unknown": {
+          "陀飛輪 (考試版)": {
+            "path": "陀飛輪(考試版)-Capo0-KeyC.pdf",
+            "youtube": "Oi-PfVu8Rl0",
+          },
+          "流星雨 (泰文版)": {
+            "path": "流星雨(泰文版)-Capo3-KeyC.pdf",
+            "youtube": "RJ0qpac9rac",
+          },
+        },
+        "MISIA": {
+          "逢いたくていま": {
+            "path": "https://gakufu.gakki.me/m/index2.php?p=RQ00744&k=m6#rp",
+            "youtube": "pVpbb7E4wAo",
+          },
+        },
+        "K": {
+          "Only Human": {
+            "path": "https://gakufu.gakki.me/m/?p=DT02419&k=m4",
+            "youtube": "bzrbew1Eo-s",
+          }
+        },
+        "Elton John": {
+          "Can You Feel The Love Tonight": {
+            "path": "Can You Feel The Love Tonight-Elton John-Capo3-KeyC.pdf",
+            "youtube": "KjgWWjkNbhU",
+          }
+        },
+        "陳妍希": {
+          "孩子氣": {
+            "path": "http://chord4.com/tabs/11729",
+            "youtube": "m5Ie27itkuU",
+          }
+        },
+        "陳柏宇": {
+          "斷絕來往": {
+            "path": "https://zh-hk.guitarians.com/chord/2123/陳柏宇-斷絕來往",
+            "youtube": "",
+          }
+        },
+        "山口百恵": {
+          "さよならの向こう側": {
+            "path": "https://gakufu.gakki.me/m/?p=DT05152",
+            "youtube": "",
+          },
+        },
+        "張學友+梅艷芳": {
+          "相愛很難": {
+            "path": "https://zh-hk.guitarians.com/chord/2340/張學友-相愛很難",
+            "youtube": "",
+          },
+        },
+        "杉山加奈": {
+          "ありのままに": {
+            "path": "https://ja.chordwiki.org/wiki.cgi?c=view&t=ありのままに&key=-3&symbol=",
+            "youtube": "",
+          },
+        },
+        "IU": {
+          "長夜": {
+            "path": "http://daydayguitar.blogspot.com/2017/11/L9wtKDrhqYI.html",
+            "youtube": "",
+          },
+        },
+        "手嶌葵": {
+          "明日への手紙": {
+            "path": "https://www.ufret.jp/song.php?data=29042",
+            "youtube": "",
+          },
+        },
+        "黃明志+二宮芽生": {
+          "Makudonarudo": {
+            "path": "http://www.91pu.com.tw/song/2018/0104/8639.html",
+            "youtube": "",
+          },
+        },
+        "黃明志+李佳薇": {
+          "一起飆高音": {
+            "path": "https://daydayguitar.blogspot.com/2018/01/YJN6zIRYWD4.html",
+          },
+        },
+        "蘇永康": {
+          "不想獨自快樂": {
+            "path": "https://zh-hk.guitarians.com/chord/3007/蘇永康-不想獨自快樂?targetCapo=3",
+            "youtube": "",
+          },
+        },
+        "符家浚": {
+          "自動棄權": {
+            "path": "自動棄權-放手版-符家浚-Capo3-KeyG.pdf",
+            "youtube": "",
+          },
+        },
+        "那英": {
+          "夢一場": {
+            "path": "https://www.polygon.guitars/score/2808/夢一場",
+            "youtube": "0890XSydrOM",
+          },
+        },
+        "小泉今日子": {
+          "潮騒のメモリー": {
+            "path": "https://gakufu.gakki.me/m/?p=JTRQ0002&k=m3",
+            "youtube": "",
+          },
+        },
+        "Sarah Brightman+Paul Stanley": {
+          "I Will Be With You": {
+            "path": "https://www.cifraclub.com.br/sarah-brightman/i-will-be-with-you/",
+            "youtube": "",
+          },
+        },
+        "Simon & Garfunkel": {
+          "The Sound Of Silence": {
+            "path": "The Sound of Silence-Simon & Garfunkel-Capo6-KeyAm.pdf",
+            "youtube": "",
+          },
+        },
+        "達明一派": {
+          "十個救火的少年": {
+            "path": "https://chord4.com/tabs/22054",
+            "youtube": "",
+          },
+          "每日一禁果": {
+            "path": "https://chord4.com/tabs/4999",
+            "youtube": "",
+          },
+        },
+        "HANA 菊梓喬": {
+          "沒有你開始": {
+            "path": "浩賢/沒有你開始-菊梓喬-Capo5-KeyAm.pdf",
+            "youtube": "",
+          },
+        },
+        "陳展鵬+蕭正楠": {
+          "巨輪": {
+            "path": "巨輪-陳展鵬+蕭正楠-Capo3-KeyC.pdf",
+            "youtube": "",
+          },
+        },
+        "スキマスイッチ": {
+          "奏 (かなで)": {
+            "path": "https://gakufu.gakki.me/m/?p=DT11475&k=m3",
+            "youtube": "",
+          },
+        },
+        "レミオロメン": {
+          "粉雪": { "path": "https://gakufu.gakki.me/m/?p=DT12741" },
+        },
+        "Ed Sheeran": {
+          "Photograph": { "path": "Photograph-Ed Sheeran-Capo2-KeyD.pdf" },
+        },
+        "馬良": {
+          "醒著醉": { "path": "醒著醉-馬良-Capo5-KeyC.pdf" }
+        },
+        "品冠": {
+          "我以為": { "path": "https://zh-hk.guitarians.com/chord/1126/品冠-我以為" }
+        },
+        "JoeyThye x EdwinHo": {
+          "我與我的最愛同屋七年好好戀愛 十分愛但願好心好報 (Capo 3)": { "path": "我與我的最愛同屋七年好好戀愛 十分愛但願好心好報-JoeyThye x EdwinHo-Capo3-KeyE.pdf" },
+          "我與我的最愛同屋七年好好戀愛 十分愛但願好心好報 (Capo 0)": { "path": "我與我的最愛同屋七年好好戀愛 十分愛但願好心好報-JoeyThye x EdwinHo-Capo0-KeyG.pdf" },
+        },
+        "盧冠廷": {
+          "陪著你走": {
+            "path": "http://polygonguitar.blogspot.com/2016/02/chord_95.html"
+          }
+        },
+        "新青年理髮廳": {
+          "如果一生只有三十歲": {
+            "path": "https://www.polygon.guitars/score/1627/如果一生只有三十歲"
+          }
+        },
+        "周興哲": {
+          "你好不好": {
+            "path": "https://www.polygon.guitars/score/1670/你好不好%20%28遺憾拼圖片尾曲%29",
+          }
+        },
+        "周杰倫": {
+          "說好不哭": {
+            "path": "https://www.polygon.guitars/score/4414/說好不哭"
+          },
+          "蒲公英的約定": {
+            "path": "https://www.polygon.guitars/score/297/蒲公英的約定"
+          },
+          "晴天": {"path": "晴天-周杰倫-Capo0-KeyG.pdf"},
+          "不能說的秘密": {"path": "不能說的秘密-周杰倫-Capo0-KeyG.pdf"},
+        },
+        "林欣彤": {
+          "忍": { "path": "https://zh-hk.guitarians.com/chord/24967/林欣彤-忍?targetCapo=6" },
+        },
+        "張智霖": {
+          "祝君好": { "path": "https://zh-hk.guitarians.com/chord/19013/張智霖-祝君好" },
+        },
+        "傅珮嘉": {
+          "絕": {"path": "http://polygonguitar.blogspot.com/2012/03/chord_9129.html?m=1"},
+        },
+        "Idina Menzel+Kristen Bell+Josh Gad++Jonathan Groff": {
+          "Some Things Never Change": {
+            "path": "Some Things Never Change-Josh Gad+Kristen Bell+Idina Menzel+Jonathan Groff-Capo5-KeyC.pdf"
+          },
+        },
+        "Idina Menzel": {
+          "Into The Unknown": {
+            "path": "Into The Unknown-Idina Menzel-Capo1-KeyD#m.pdf"
+          },
+        },
+        "陳雪燃": {
+          "無名之輩": {
+            "path": "無名之輩-陳雪燃-Capo1-KeyC.pdf",
+          },
+        },
+        "JULEPS": {
+          "旅立つ日～完全版": {
+            "path": "https://gakufu.gakki.me/m/data/DT2622.html",
+          },
+        },
+        "許志安+陳慧珊": {
+          "苦口良藥": {
+            "path": "苦口良藥-許志安+陳慧珊-Capo0-KeyG.pdf",
+          }
+        },
+        "milktub": {
+          "有頂天人生": {
+            "path": "https://ja.chordwiki.org/wiki.cgi?c=view&t=有頂天人生&key=-4&symbol=",
+          },
+          "成るがまま騒ぐまま": {
+            "path": "https://ja.chordwiki.org/wiki.cgi?c=view&t=成るがまま騒ぐまま&key=-4&symbol=",
+          },
+        },
+        "あいみょん": {
+          "裸の心": {
+            "path": "https://gakufu.gakki.me/m/data/N13240.html",
+          },
+          "マリーゴルド": {
+            "path": "https://gakufu.gakki.me/m/index.php?p=RQ09009&k=m2#rp",
+          },
+        },
+        "宋冬野": {
+          "董小姐": {
+            "path": "董小姐-宋冬野-Capo4-KeyC.pdf",
+          },
+        },
+        "Nacho Martin": {
+          "Raiders": {
+            "path": "Raiders-Nacho Martin-Capo1-KeyC.pdf",
+          },
+        },
+        "黃貫中": {
+          "天與地": {
+            "path": "天與地-黃貫中-Capo0-KeyBm.pdf",
+          },
+        },
+        "Lukas Graham": {
+          "7 Years": {
+            "path": "7 Years-Lukas Graham-Capo3-KeyGm.pdf",
+          },
+        },
+        "Boy'z": {
+          "死性不改": {
+            "path": "死性不改-Boy'z-Capo2-KeyC.pdf",
+          },
+        },
+        "劉祖德+朴妍臻+香港童聲合唱團": {
+          "你的扣肉": {
+            "path": "你的扣肉-劉祖德+朴妍臻+香港童聲合唱團-Capo5-KeyC",
+          },
+        },
+        "菅田将暉": {
+          "さよならエレジー": {
+            "path": "https://gakufu.gakki.me/m/index.php?p=N09393&k=m1#rp",
+          },
+        },
+        "桑田佳祐": {
+          "明日晴れるかな": {
+            "path": "https://gakufu.gakki.me/m/index.php?p=DT13283&k=m5#rp",
+          },
+        },
+        "中島みゆき": {
+          "糸": {
+            "path": "https://www.ufret.jp/song.php?data=23650",
+          },
+        },
+        "井上陽水": {
+          "少年時代": {
+            "path": "https://gakufu.gakki.me/m/index2.php?p=DT10646&k=m2#rp",
+            "youtube": "xXfM5JLHk2c",
+          },
+        },
+        "LiSA": {
+          "炎": {
+            "path": "炎-LiS-Capo2-KeyAm.pdf",
+          },
+        },
+        "張衛健": {
+          "你愛我像誰": {
+            "path": "https://www.91pu.com.tw/song/2016/0516/3454.html",
+          },
+          "身體健康": {
+            "path": "https://zh-hk.guitarians.com/chord/2800/張衛健--身體健康?targetCapo=2",
+          },
+        },
+        "姜濤": {
+          "蒙著嘴說愛你": {"path": "蒙著嘴說愛你-姜濤-Capo1-KeyCToD.pdf"},
+          "亞特蘭提斯": {"path": "亞特蘭提斯-姜濤-Capo4-KeyC.pdf"},
+        },
+        "路家敏": {
+          "小時候": {"path": "小時候-路家敏-Capo0-KeyC.pdf"},
+        },
+        "serrini": {
+          "蘇菲亞的波霸珍珠奶茶": {"path": "蘇菲亞的波霸珍珠奶茶-serrini-Capo0-KeyC.pdf"},
+        },
+        "白珍寶": {
+          "冰心鎖": {"path": "冰心鎖-白珍寶-Capo1-KeyG.pdf"},
+        },
+        "Idina Menzel": {
+          "Let It Go": {"path": "Let It Go-Idina Menzel-Capo1-KeyG.pdf"},
+        },
+        "韋禮安": {
+          "赤い糸": {"path": "赤い糸-韋禮安-Capo3-KeyC.pdf"},
+          "如果可以 (Capo 3)": {"path": "如果可以-韋禮安-Capo3-KeyC.pdf"},
+          "如果可以 (Capo 8)": {"path": "如果可以-韋禮安-Capo8-KeyG.pdf"},
+        },
+        "GUMI": {
+          "さよならのかわりに": {"path": "さよならのかわりに-GUMI-Capo2-KeyCToD.pdf"},
+        },
+        "宮脇詩音": {
+          "また君に会える日": {"path": "https://gakufu.gakki.me/m/index.php?p=RQ06294&k=#rp"},
+          "月光": {"path": "https://gakufu.gakki.me/m/index.php?p=RQ07564&k=m5#rp",},
+        },
+        "暗殺教室3年E組": {
+          "旅立ちのうた": {"path": "https://www.91pu.com.tw/song/2016/0929/4746.html",},
+        },
+        "YOASOBI": {
+          "夜に駆ける": {"path": "https://gakufu.gakki.me/m/index.php?p=N13307&k=m3#rp",},
+        },
+        "中川あゆみ": {
+          "事実〜12歳で私が決めたコト〜": {"path": "https://www.ufret.jp/song.php?data=21021"},
+        },
+      };
+
+      function constructMainMenu(data) {
+        var $mainMenu = $("#main-menu");
+        var singerNames = Object.keys(data).sort(function (a, b) {
+          return a.localeCompare(b, "en", { sensitivity: "base" });
+        });
+
+        var forDuplicates = {};
+
+        var menuHtml = "";
+        for (var i=0, singerNamesCount=singerNames.length; i<singerNamesCount; i++) {
+          var singerName = singerNames[i];
+          var singer = data[singerName];
+          var songNames = Object.keys(singer).sort(function (a, b) {
+            return a.localeCompare(b, "en", { sensitivity: "base" });
+          });
+
+          if (typeof forDuplicates[singerName] !== "undefined") {
+            alert("Duplicate Found: " + singerName);
+          } else {
+            forDuplicates[singerName] = true;
+          }
+
+          var songsHtml = "";
+          for (var j=0, songNamesCount=songNames.length; j<songNamesCount; j++) {
+            var songName = songNames[j];
+            var song = singer[songName];
+            var youtubeAttr = (typeof song["youtube"] !== "undefined" && song["youtube"] != "") ? (" data-youtube-id=\"" + song["youtube"] + "\"") : "";
+            var iconClass = "fi-link";
+            var link = song["path"];
+            if (song["path"].match(/\.pdf$/i)) {
+              iconClass = "fi-page-pdf";
+              link = "chords/" + encodeURI(song["path"]).split("#").join("%23");
+            }
+
+            songsHtml += "<li><a target=\"display\" href=\"" + link + "\"" + youtubeAttr + "><i class=\"" + iconClass + "\"></i> <span>" + songName + "</span></a></li>";
+          }
+
+          menuHtml += "<li class=\"menu-text\">" +
+            singerName +
+            "<ul class=\"nested vertical menu icons icon-left\">" +
+              songsHtml +
+            "</ul>" +
+          "</li>";
+        }
+
+        $mainMenu.html(menuHtml);
+      }
+
+      constructMainMenu(data);
+      $(document).foundation();
+      $(document).ready(function() {
+        $(document).on("click", "a[target='display']", function(e) {
+          var youtubeId = $(this).data("youtube-id");
+          var src = (typeof youtubeId !== "undefined") ? ("https://www.youtube.com/embed/" + youtubeId) : "";
+          $("iframe[name='youtube-frame']").attr("src", src);
+        })
+
+        $("#filter-input").on("keyup", function () {
+          var filter = $(this).val();
+
+          if (filter === "") {
+            constructMainMenu(data);
+            return;
+          }
+
+          var matcher = new RegExp(filter, "i");
+
+          var singerNames = Object.keys(data).sort();
+          var newData = {};
+          for (var i=0, singerNamesCount=singerNames.length; i<singerNamesCount; i++) {
+            var singerName = singerNames[i];
+            var singer = data[singerName];
+
+            if (matcher.test(singerName)) {
+              newData[singerName] = singer;
+            } else {
+              var songNames = Object.keys(singer).sort();
+              for (var j=0, songNamesCount=songNames.length; j<songNamesCount; j++) {
+                var songName = songNames[j];
+                var song = singer[songName];
+                if (matcher.test(songName)) {
+                  if (typeof newData[singerName] === "undefined") { newData[singerName] = {}; }
+                  newData[singerName][songName] = song;
+                }
+              }
+            }
+          }
+
+          constructMainMenu(newData);
+        });
+      });
+    </script>
+  </body>
+</html>
